@@ -1,0 +1,9 @@
+<h3><%= @task.title.capitalize %></h1>
+
+<p><%= @task.details %></p>
+
+<p><%= link_to 'Back to Index', tasks_path %></p>
+<p><%= link_to 'Edit this Task', edit_task_path(@task) %></p>
+<p><%= link_to 'Delete',
+    task_path(@task),
+    data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
